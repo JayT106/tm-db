@@ -33,5 +33,9 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )
 
+replace (
+	github.com/cosmos/gorocksdb => github.com/JayT106/gorocksdb v1.2.1-0.20220520155701-7f98b46fd4c1
+)
+
 // Breaking changes were released with the wrong tag (use v0.6.6 or later).
 retract v0.6.5
