@@ -44,7 +44,7 @@ func NewRocksDB(name string, dir string) (*RocksDB, error) {
 	// 1.5GB maximum memory use for writebuffer.
 	opts.OptimizeLevelStyleCompaction(512 * 1024 * 1024)
 	opts.SetSkipCheckingSSTFilesSuzesOnDbOpen(true)
-	fmt.println("rocksdb SetSkipCheckingSSTFilesSuzesOnDbOpen")
+	fmt.Println("rocksdb SetSkipCheckingSSTFilesSuzesOnDbOpen")
 	return NewRocksDBWithOptions(name, dir, opts)
 }
 
