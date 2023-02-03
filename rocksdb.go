@@ -39,7 +39,7 @@ func NewRocksDB(name string, dir string) (*RocksDB, error) {
 	opts := grocksdb.NewDefaultOptions()
 	opts.SetBlockBasedTableFactory(bbto)
 	// SetMaxOpenFiles to 4096 seems to provide a reliable performance boost
-	opts.SetMaxOpenFiles(4096)
+	opts.SetMaxOpenFiles(1024)
 	opts.SetCreateIfMissing(true)
 	opts.IncreaseParallelism(runtime.NumCPU())
 	// 1.5GB maximum memory use for writebuffer.
